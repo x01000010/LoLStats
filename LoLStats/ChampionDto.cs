@@ -86,9 +86,10 @@ namespace LoLStats
             set { rankedPlayEnabled = value; }
         }
         ChampionDto() { }
-        public string toString() {
+        public string toString()
+        {
             string str = string.Format(
-                "{0}-{1}\n\tDefense: {2}\n\tAttack: {3}\n\tMagic: {4}\n\tDifficulty: {5}\n",name,id,defenseRank,attackRank,magicRank,difficultyRank);
+                "{0}-{1}\n\tDefense: {2}\n\tAttack: {3}\n\tMagic: {4}\n\tDifficulty: {5}\n", name, id, defenseRank, attackRank, magicRank, difficultyRank);
             return str;
         }
     }
