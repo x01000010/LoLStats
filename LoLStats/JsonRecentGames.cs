@@ -9,7 +9,7 @@ namespace LoLStats
 {
     internal class JsonRecentGames
     {
-        [JsonProperty("games")]
+        //[JsonProperty("games")]
 
     }
 }
