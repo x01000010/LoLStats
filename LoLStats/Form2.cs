@@ -38,7 +38,12 @@ namespace LoLStats
             string sql = "create table Champions (active boolean, attackRank int, botEnabled boolean, botMmEnabled boolean, defenseRank int, difficultyRank int, freeToPlay boolean, id int primary key, magicRank int, name string, rankedPlayEnabled	boolean)";
             SQLiteCommand com = new SQLiteCommand(sql, c);
             com.ExecuteNonQuery();
-            c.Close();
+            
+            
+            
+            
+            
+            
 
             string championAPI = string.Format(@"/api/lol/{0}/v1.1/champion", _region);
             string query = string.Empty;
@@ -52,14 +57,31 @@ namespace LoLStats
             query = string.Format("{0}{1}?{3}{2}", _baseAddress, championAPI, _apiKey, ftp);
 
             ChampionListDto championList = Retriever.GetChampionList(query);
+            //List<ChampionDto> c = new List<ChampionDto>(championList.Champions);
+            List<ChampionDto> champs = new List<ChampionDto>(championList.Champions);
 
+            foreach (ChampionDto champ in championList.Champions) {
 
-
+                string championInsert = string.Format("insert into Champions (active, attackRank, botEnabled, botMmEnabled, defenseRank, difficultyRank, freeToPlay, id, magicRank, name, rankedPlayEnabled) values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, '{9}', {10});",__boolToInt(champ.Active), champ.AttackRank, __boolToInt(champ.BotEnabled), __boolToInt(champ.BotMmEnabled), champ.DefenseRank, champ.DifficultyRank, __boolToInt(champ.FreeToPlay), champ.Id, champ.MagicRank, champ.Name, __boolToInt(champ.RankedPlayEnabled));
+                com = new SQLiteCommand(championInsert, c);
+                com.ExecuteNonQuery();
+            }
+                
+                DataSet ds = new DataSet();
+            var da = new SQLiteDataAdapter("select * from Champions;",c);
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            c.Close();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private int __boolToInt(bool b) {
+            return (b == true) ? 1 : 0;
         }
     }
 }

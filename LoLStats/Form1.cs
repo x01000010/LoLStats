@@ -18,7 +18,7 @@ namespace LoLStats
         private string _baseAddress;
         private string _region;
 
-        private List<ChampionDto> _championList;
+        private List<OLDChampionDto> _championList;
 
         public Form1()
         {
@@ -28,7 +28,7 @@ namespace LoLStats
             _baseAddress = @"https://prod.api.pvp.net";
 
             //check champion list for what we already have
-            _championList = new List<ChampionDto>();
+            _championList = new List<OLDChampionDto>();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,8 +50,8 @@ namespace LoLStats
             var json = new WebClient().DownloadString(query);
             JsonChamps champs = JsonConvert.DeserializeObject<JsonChamps>(json);            
 
-            _championList = new List<ChampionDto>(champs.championArray);
-            foreach (ChampionDto c in _championList) {
+            _championList = new List<OLDChampionDto>(champs.championArray);
+            foreach (OLDChampionDto c in _championList) {
                 Console.WriteLine(c.toString());
                 Console.WriteLine();
             }

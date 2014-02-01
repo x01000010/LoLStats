@@ -13,6 +13,6 @@ namespace LoLStats
 
 
         [JsonProperty("champions")]
-        public ChampionDto[] championArray;
+        public OLDChampionDto[] championArray;
     }
 }

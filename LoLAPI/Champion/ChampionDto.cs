@@ -8,7 +8,7 @@ namespace LoLAPI
     public class ChampionDto
     {
         private bool active;  //Indicates if the champion is active.
-
+        
         public bool Active
         {
             get { return active; }
@@ -86,5 +86,6 @@ namespace LoLAPI
         }
 
         public ChampionDto() { }
+        
     }
 }

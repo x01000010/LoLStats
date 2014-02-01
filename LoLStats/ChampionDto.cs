@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoLStats
 {
-    class ChampionDto
+    class OLDChampionDto
     {
         private bool active;
 
@@ -85,7 +85,7 @@ namespace LoLStats
             get { return rankedPlayEnabled; }
             set { rankedPlayEnabled = value; }
         }
-        ChampionDto() { }
+        OLDChampionDto() { }
         public string toString()
         {
             string str = string.Format(
