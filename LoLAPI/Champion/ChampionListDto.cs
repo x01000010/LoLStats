@@ -5,15 +5,20 @@ using System.Text;
 
 namespace LoLAPI
 {
-    class ChampionListDto
+    public class ChampionListDto
     {
         private ChampionDto[] champions;
 
-        internal ChampionDto[] Champions
+        public ChampionDto[] Champions
         {
             get { return champions; }
             set { champions = value; }
         }
-        ChampionListDto() { }
+
+        
+        public ChampionListDto(
+            ) {
+                champions = null;
+        }
     }
 }

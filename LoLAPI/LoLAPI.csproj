@@ -52,6 +52,7 @@
     <Compile Include="Game\PlayerDto.cs" />
     <Compile Include="Game\GameDto.cs" />
     <Compile Include="Champion\ChampionDto.cs" />
+    <Compile Include="Retriever.cs" />
     <Compile Include="Stats\ChampionStatsDto.cs" />
     <Compile Include="Stats\PlayerStatsSummaryListDto.cs" />
     <Compile Include="Stats\AggregatedStatsDto.cs" />

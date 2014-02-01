@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LoLAPI
 {
-    class ChampionDto
+    public class ChampionDto
     {
         private bool active;  //Indicates if the champion is active.
 
@@ -85,6 +85,6 @@ namespace LoLAPI
             set { rankedPlayEnabled = value; }
         }
 
-        ChampionDto() { }
+        public ChampionDto() { }
     }
 }
