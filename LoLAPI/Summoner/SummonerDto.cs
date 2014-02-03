@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoLAPI.Summoner
+namespace LoLAPI
 {
-    class SummonerDto
+    public class SummonerDto
     {
         private long id;  //Summoner ID.
 
@@ -44,6 +44,6 @@ namespace LoLAPI.Summoner
             set { summonerLevel = value; }
         }
 
-        SummonerDto() { }
+        public SummonerDto() { }
     }
 }

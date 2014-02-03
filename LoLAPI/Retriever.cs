@@ -19,6 +19,20 @@ namespace LoLAPI
             return CLD;
         }
 
-        
+        public static void GetSummonerListByName(params string[] apiURL ) {
+
+            Dictionary<string, SummonerDto> summonerDictionary = new Dictionary<string, SummonerDto>();
+            foreach (string api in apiURL)
+            {
+                var json = new WebClient().DownloadString(api);
+                Dictionary<string,SummonerDto> tempSummonerDictionary = JsonConvert.DeserializeObject<Dictionary<string, SummonerDto>>(json);
+                foreach (KeyValuePair<string, SummonerDto> summoner in tempSummonerDictionary) {
+
+                    summonerDictionary.Add(summoner.Key, summoner.Value);
+                }
+                
+                
+            }
+        }
     }
 }

@@ -31,35 +31,35 @@ namespace LoLStats
             _championList = new List<OLDChampionDto>();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string apiCall = string.Format(@"/api/lol/{0}/v1.1/champion", _region);
-            string query = string.Empty;
-            string freeToPlay = String.Empty;
+        private void button1_Click(object sender, EventArgs e){
+        //{
+        //    string apiCall = string.Format(@"/api/lol/{0}/v1.1/champion", _region);
+        //    string query = string.Empty;
+        //    string freeToPlay = String.Empty;
 
-            if (string.Compare(freeToPlay.ToLower(), "false") == 0 || string.Compare(freeToPlay.ToLower(), "true") == 0)
-            {
-                string ftp = string.Format("freeToPlay={0}", freeToPlay);
-                query = string.Format("{0}{1}?{3}?{2}", _baseAddress, apiCall, _apiKey,ftp);
-            }
-            else
-            {
-                query = string.Format("{0}{1}?{2}", _baseAddress, apiCall, _apiKey);
-            }
+        //    if (string.Compare(freeToPlay.ToLower(), "false") == 0 || string.Compare(freeToPlay.ToLower(), "true") == 0)
+        //    {
+        //        string ftp = string.Format("freeToPlay={0}", freeToPlay);
+        //        query = string.Format("{0}{1}?{3}?{2}", _baseAddress, apiCall, _apiKey,ftp);
+        //    }
+        //    else
+        //    {
+        //        query = string.Format("{0}{1}?{2}", _baseAddress, apiCall, _apiKey);
+        //    }
 
-            var json = new WebClient().DownloadString(query);
-            JsonChamps champs = JsonConvert.DeserializeObject<JsonChamps>(json);            
+        //    var json = new WebClient().DownloadString(query);
+        //    //JsonChamps champs = JsonConvert.DeserializeObject<JsonChamps>(json);            
 
-            _championList = new List<OLDChampionDto>(champs.championArray);
-            foreach (OLDChampionDto c in _championList) {
-                Console.WriteLine(c.toString());
-                Console.WriteLine();
-            }
+        //    _championList = new List<OLDChampionDto>(champs.championArray);
+        //    foreach (OLDChampionDto c in _championList) {
+        //        Console.WriteLine(c.toString());
+        //        Console.WriteLine();
+        //    }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string summonerID = "39088285";
+            //string summonerID = "39088285";
         }
     }
 }
