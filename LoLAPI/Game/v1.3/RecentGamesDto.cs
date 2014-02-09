@@ -5,15 +5,18 @@ using System.Text;
 
 namespace LoLAPI
 {
-    class RecentGamesDto
+    public class RecentGamesDto
     {
+
         private HashSet<GameDto> games;
 
-        private HashSet<GameDto> Games
+        public HashSet<GameDto> Games
         {
             get { return games; }
             set { games = value; }
-        }
+        }       
+
+
         private long summonerId;
 
         public long SummonerId
@@ -21,6 +24,9 @@ namespace LoLAPI
             get { return summonerId; }
             set { summonerId = value; }
         }
-        RecentGamesDto() { }
+
+        
+        public RecentGamesDto(
+            ) { }
     }
 }

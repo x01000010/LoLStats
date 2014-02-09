@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LoLAPI
 {
-    class RawStatsDto
+    public class RawStatsDto
     {
         private int assists;
 
@@ -540,6 +540,6 @@ namespace LoLAPI
             set { win = value; }
         }
 
-        RawStatsDto() { }
+        public RawStatsDto() { }
     }
 }

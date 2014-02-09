@@ -31,9 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,16 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Champion\ChampionListDto.cs" />
+    <Compile Include="Champion\v1.1\ChampionListDto.cs" />
+    <Compile Include="Champion\v1.1\ChampionRetriever.cs" />
+    <Compile Include="Game\v1.3\GameRetriever.cs" />
     <Compile Include="League\LeagueDto.cs" />
     <Compile Include="League\LeagueItemDto.cs" />
     <Compile Include="League\MiniSeriesDto.cs" />
-    <Compile Include="Game\RecentGamesDto.cs" />
-    <Compile Include="Game\RawStatsDto.cs" />
-    <Compile Include="Game\PlayerDto.cs" />
-    <Compile Include="Game\GameDto.cs" />
-    <Compile Include="Champion\ChampionDto.cs" />
+    <Compile Include="Game\v1.3\RecentGamesDto.cs" />
+    <Compile Include="Game\v1.3\RawStatsDto.cs" />
+    <Compile Include="Game\v1.3\PlayerDto.cs" />
+    <Compile Include="Game\v1.3\GameDto.cs" />
+    <Compile Include="Champion\v1.1\ChampionDto.cs" />
     <Compile Include="Retriever.cs" />
+    <Compile Include="StaticVariables.cs" />
     <Compile Include="Stats\ChampionStatsDto.cs" />
     <Compile Include="Stats\PlayerStatsSummaryListDto.cs" />
     <Compile Include="Stats\AggregatedStatsDto.cs" />
@@ -77,9 +80,8 @@
     <Compile Include="Team\TeamStatSummaryDto.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dll\Newtonsoft.Json.dll" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

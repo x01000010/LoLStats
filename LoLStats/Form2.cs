@@ -14,10 +14,8 @@ namespace LoLStats
 {
     public partial class Form2 : Form
     {
-        
-       string   _apiKey = "api_key=e480e552-bfbe-4b4c-9ce4-329beaf06233";
-            string _region = "na";
-            string _baseAddress = @"https://prod.api.pvp.net";
+
+        private string _apiKey = "api_key=e480e552-bfbe-4b4c-9ce4-329beaf06233";
             
         
         public Form2()
@@ -41,9 +39,9 @@ namespace LoLStats
 
        
                         string summoner= "x01000010";
-            string championAPI = string.Format(@"/api/lol/{0}/v1.3/summoner/by-name/{1}", _region,summoner);
+            //string championAPI = string.Format(@"/api/lol/{0}/v1.3/summoner/by-name/{1}", _region,summoner);
         string summonerQuery = string.Empty;
-        summonerQuery = string.Format(@"{0}/{1}?{2}",_baseAddress,championAPI,_apiKey);
+        //summonerQuery = string.Format(@"{0}/{1}?{2}",_baseAddress,championAPI,_apiKey);
         Console.WriteLine(summonerQuery);
         Dictionary<string, SummonerDto> l = new Dictionary<string, SummonerDto>();
 
@@ -87,19 +85,9 @@ namespace LoLStats
 
 
 
-            string championAPI = string.Format(@"/api/lol/{0}/v1.1/champion", _region);
-            string query = string.Empty;
-            string freeToPlay = string.Empty;
-            string ftp = string.Empty;
-            if (string.Compare(freeToPlay.ToLower(), "false") == 0 || string.Compare(freeToPlay.ToLower(), "true") == 0)
-            {
-                ftp = string.Format("freeToPlay={0}&", freeToPlay);
+            
 
-            }
-            query = string.Format("{0}{1}?{3}{2}", _baseAddress, championAPI, _apiKey, ftp);
-
-            ChampionListDto championList = Retriever.GetChampionList(query);
-            //List<ChampionDto> c = new List<ChampionDto>(championList.Champions);
+            ChampionListDto championList =LoLAPI.ChampionRetriever.GetChampionList();            
             List<ChampionDto> champs = new List<ChampionDto>(championList.Champions);
 
             foreach (ChampionDto champ in championList.Champions)
@@ -116,6 +104,12 @@ namespace LoLStats
             dataGridView1.DataSource = ds.Tables[0].DefaultView;
             c.Close();
         
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            RecentGamesDto rd = GameRetriever.GetGameData();
+            button1.Show();
         }
     }
 }

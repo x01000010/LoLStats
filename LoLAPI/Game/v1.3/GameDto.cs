@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LoLAPI
 {
-    class GameDto
+    public class GameDto
     {
         private int championId;  //Champion ID associated with game.
 
@@ -105,6 +105,6 @@ namespace LoLAPI
             get { return teamId; }
             set { teamId = value; }
         }
-        GameDto() { }
+        public GameDto() { }
     }
 }
