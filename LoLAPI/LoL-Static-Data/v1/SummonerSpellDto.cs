@@ -8,25 +8,25 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class SummonerSpellDto
     {
+        private int cooldown[];
+private string cooldownBurn;
+private int cost[];
+private string costBurn;
+private string costType;
+private string description;
+private object effect[];
+private string effectBurn[];
+private string id;
+private ImageDto image;
+private string key;
+private int maxrank;
+private string modes[];
+private string name;
+private object range;
+private string rangeBurn;
+private string resource;
+private int summonerLevel;
+private string tooltip;
+private SummonerSpellVarsDto vars[];
     }
 }
-cooldown	List[int]	
-cooldownBurn	string	
-cost	List[int]	
-costBurn	string	
-costType	string	
-description	string	
-effect	List[Object]	
-effectBurn	List[string]	
-id	string	
-image	ImageDto	
-key	string	
-maxrank	int	
-modes	List[string]	
-name	string	
-range	Object	
-rangeBurn	string	
-resource	string	
-summonerLevel	int	
-tooltip	string	
-vars	List[SummonerSpellVarsDto]
