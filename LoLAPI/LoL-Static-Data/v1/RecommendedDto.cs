@@ -8,12 +8,12 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class RecommendedDto
     {
+        private BlockDto[] blocks;
+        private string champion;
+        private string map;
+        private string mode;
+        private bool priority;
+        private string title;
+        private string type;
     }
 }
-blocks	List[BlockDto]	
-champion	string	
-map	string	
-mode	string	
-priority	boolean	
-title	string	
-type	string
