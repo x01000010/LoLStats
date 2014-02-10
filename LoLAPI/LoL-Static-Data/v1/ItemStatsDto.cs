@@ -8,64 +8,64 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class ItemStatsDto
     {
+        private int FlatArmorMod;
+        private int FlatAttackSpeedMod;
+        private int FlatBlockMod;
+        private int FlatCritChanceMod;
+        private int FlatCritDamageMod;
+        private int FlatEXPBonus;
+        private int FlatHPPoolMod;
+        private int FlatHPRegenMod;
+        private int FlatMPPoolMod;
+        private int FlatMPRegenMod;
+        private int FlatMagicDamageMod;
+        private int FlatMovementSpeedMod;
+        private int FlatPhysicalDamageMod;
+        private int FlatSpellBlockMod;
+        private int PercentArmorMod;
+        private int PercentAttackSpeedMod;
+        private int PercentBlockMod;
+        private int PercentCritChanceMod;
+        private int PercentCritDamageMod;
+        private int PercentDodgeMod;
+        private int PercentEXPBonus;
+        private int PercentHPPoolMod;
+        private int PercentHPRegenMod;
+        private int PercentMPPoolMod;
+        private int PercentMPRegenMod;
+        private int PercentMagicDamageMod;
+        private int PercentMovementSpeedMod;
+        private int PercentPhysicalDamageMod;
+        private int PercentSpellBlockMod;
+        private int rFlatArmorModPerLevel;
+        private int rFlatArmorPenetrationMod;
+        private int rFlatArmorPenetrationModPerLevel;
+        private int rFlatCritChanceModPerLevel;
+        private int rFlatCritDamageModPerLevel;
+        private int rFlatDodgeMod;
+        private int rFlatDodgeModPerLevel;
+        private int rFlatGoldPer10Mod;
+        private int rFlatHPModPerLevel;
+        private int rFlatHPRegenModPerLevel;
+        private int rFlatMPModPerLevel;
+        private int rFlatMPRegenModPerLevel;
+        private int rFlatMagicDamageModPerLevel;
+        private int rFlatMagicPenetrationMod;
+        private int rFlatMagicPenetrationModPerLevel;
+        private int rFlatMovementSpeedModPerLevel;
+        private int rFlatPhysicalDamageModPerLevel;
+        private int rFlatSpellBlockModPerLevel;
+        private int rFlatTimeDeadMod;
+        private int rFlatTimeDeadModPerLevel;
+        private int rPercentArmorPenetrationMod;
+        private int rPercentArmorPenetrationModPerLevel;
+        private int rPercentAttackSpeedModPerLevel;
+        private int rPercentCooldownMod;
+        private int rPercentCooldownModPerLevel;
+        private int rPercentMagicPenetrationMod;
+        private int rPercentMagicPenetrationModPerLevel;
+        private int rPercentMovementSpeedModPerLevel;
+        private int rPercentTimeDeadMod;
+        private int rPercentTimeDeadModPerLevel;
     }
 }
-FlatArmorMod	int	
-FlatAttackSpeedMod	int	
-FlatBlockMod	int	
-FlatCritChanceMod	int	
-FlatCritDamageMod	int	
-FlatEXPBonus	int	
-FlatHPPoolMod	int	
-FlatHPRegenMod	int	
-FlatMPPoolMod	int	
-FlatMPRegenMod	int	
-FlatMagicDamageMod	int	
-FlatMovementSpeedMod	int	
-FlatPhysicalDamageMod	int	
-FlatSpellBlockMod	int	
-PercentArmorMod	int	
-PercentAttackSpeedMod	int	
-PercentBlockMod	int	
-PercentCritChanceMod	int	
-PercentCritDamageMod	int	
-PercentDodgeMod	int	
-PercentEXPBonus	int	
-PercentHPPoolMod	int	
-PercentHPRegenMod	int	
-PercentMPPoolMod	int	
-PercentMPRegenMod	int	
-PercentMagicDamageMod	int	
-PercentMovementSpeedMod	int	
-PercentPhysicalDamageMod	int	
-PercentSpellBlockMod	int	
-rFlatArmorModPerLevel	int	
-rFlatArmorPenetrationMod	int	
-rFlatArmorPenetrationModPerLevel	int	
-rFlatCritChanceModPerLevel	int	
-rFlatCritDamageModPerLevel	int	
-rFlatDodgeMod	int	
-rFlatDodgeModPerLevel	int	
-rFlatGoldPer10Mod	int	
-rFlatHPModPerLevel	int	
-rFlatHPRegenModPerLevel	int	
-rFlatMPModPerLevel	int	
-rFlatMPRegenModPerLevel	int	
-rFlatMagicDamageModPerLevel	int	
-rFlatMagicPenetrationMod	int	
-rFlatMagicPenetrationModPerLevel	int	
-rFlatMovementSpeedModPerLevel	int	
-rFlatPhysicalDamageModPerLevel	int	
-rFlatSpellBlockModPerLevel	int	
-rFlatTimeDeadMod	int	
-rFlatTimeDeadModPerLevel	int	
-rPercentArmorPenetrationMod	int	
-rPercentArmorPenetrationModPerLevel	int	
-rPercentAttackSpeedModPerLevel	int	
-rPercentCooldownMod	int	
-rPercentCooldownModPerLevel	int	
-rPercentMagicPenetrationMod	int	
-rPercentMagicPenetrationModPerLevel	int	
-rPercentMovementSpeedModPerLevel	int	
-rPercentTimeDeadMod	int	
-rPercentTimeDeadModPerLevel	int
