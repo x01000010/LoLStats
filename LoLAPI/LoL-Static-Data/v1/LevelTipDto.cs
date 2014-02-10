@@ -8,7 +8,7 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class LevelTipDto
     {
+        private string[] effect;
+        private string[] label;
     }
 }
-effect	List[string]	
-label	List[string]
