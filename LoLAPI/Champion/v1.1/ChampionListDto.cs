@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LoLAPI
+namespace LoLAPI.Champion.v1._1
 {
     public class ChampionListDto
     {
@@ -15,10 +15,9 @@ namespace LoLAPI
             set { champions = value; }
         }
 
-        
-        public ChampionListDto(
-            ) {
-                champions = null;
+        public ChampionListDto()
+        {
+            champions = null;
         }
     }
 }

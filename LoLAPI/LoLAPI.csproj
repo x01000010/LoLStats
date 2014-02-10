@@ -55,6 +55,38 @@
     <Compile Include="Game\v1.3\PlayerDto.cs" />
     <Compile Include="Game\v1.3\GameDto.cs" />
     <Compile Include="Champion\v1.1\ChampionDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\BasicDataDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\BasicRuneDataDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\BlockDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\BlockItemDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\ChampionDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\ChampionListDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\GoldDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\GroupDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\ImageDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\InfoDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\ItemDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\ItemListDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\ItemRuneDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\ItemStatsDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\ItemTreeDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\LevelTipDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\MasteryDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\MasteryListDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\MasteryTreeDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\PassiveDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\RealmDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\RecommendedDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\RuneDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\RuneListDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\RuneStatsDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\RuneTypeDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\SkinDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\SpellDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\StatsDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\SummonerSpellDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\SummonerSpellListDto.cs" />
+    <Compile Include="LoL-Static-Data\v1\SummonerSpellVarsDto.cs" />
     <Compile Include="Retriever.cs" />
     <Compile Include="StaticVariables.cs" />
     <Compile Include="Stats\ChampionStatsDto.cs" />
@@ -82,6 +114,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

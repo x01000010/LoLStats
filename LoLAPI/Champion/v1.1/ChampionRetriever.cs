@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoLAPI
+namespace LoLAPI.Champion.v1._1
 {
     public static class ChampionRetriever
     {
