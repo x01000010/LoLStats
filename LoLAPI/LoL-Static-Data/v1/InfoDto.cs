@@ -8,9 +8,9 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class InfoDto
     {
+        private int attack;
+        private int defense;
+        private int difficulty;
+        private int magic;
     }
 }
-attack	int	
-defense	int	
-difficulty	int	
-magic	int
