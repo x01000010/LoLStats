@@ -8,8 +8,8 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class RuneTypeDto
     {
+        private bool isrune;
+private string tier;
+private string type;
     }
 }
-isrune	boolean	
-tier	string	
-type	string
