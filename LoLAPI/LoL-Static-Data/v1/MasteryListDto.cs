@@ -8,9 +8,9 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class MasteryListDto
     {
+        private Dictionary<string, MasteryDto> data;
+        private MasteryTreeDto tree;
+        private string type;
+        private string version;
     }
 }
-data	Map[string, MasteryDto]	
-tree	MasteryTreeDto	
-type	string	
-version	string
