@@ -8,9 +8,9 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class RuneListDto
     {
+        private BasicRuneDataDto basic;
+        private Dictionary<string, RuneDto> data;
+        private string type;
+        private string version;
     }
 }
-basic	BasicRuneDataDto	
-data	Map[string, RuneDto]	
-type	string	
-version	string
