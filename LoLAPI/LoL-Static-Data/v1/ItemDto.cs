@@ -8,15 +8,15 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class ItemDto
     {
+        private string colloq;
+        private string description;
+        private GoldDto gold;
+        private string group;
+        private ImageDto image;
+        private string[] into;
+        private string name;
+        private string plaintext;
+        private Dictionary<string, object> stats;
+        private string[] tags;
     }
 }
-colloq	string	
-description	string	
-gold	GoldDto	
-group	string	
-image	ImageDto	
-into	List[string]	
-name	string	
-plaintext	string	
-stats	Map[string, Object]	
-tags	List[string]
