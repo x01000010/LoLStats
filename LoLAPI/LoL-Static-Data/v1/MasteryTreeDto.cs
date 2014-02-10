@@ -8,8 +8,8 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class MasteryTreeDto
     {
+        private object[] Defense; //Defense List[unknown]	
+        private object[] Offense;  //Offense List[unknown]	
+        private object[] Utility;  //Utility List[unknown]
     }
 }
-Defense	List[unknown]	
-Offense	List[unknown]	
-Utility	List[unknown]
