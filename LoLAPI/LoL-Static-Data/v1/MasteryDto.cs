@@ -8,11 +8,11 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class MasteryDto
     {
+        private string[] description;
+        private int id;
+        private ImageDto image;
+        private string name;
+        private string prereq;
+        private int ranks;
     }
 }
-description	List[string]	
-id	int	
-image	ImageDto	
-name	string	
-prereq	string	
-ranks	int
