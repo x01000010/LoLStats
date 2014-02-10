@@ -9,6 +9,6 @@ namespace LoLAPI.LoL_Static_Data.v1
     class GroupDto
     {
         private string MaxGroupOwnable;
-private string id;
+        private string id;
     }
 }
