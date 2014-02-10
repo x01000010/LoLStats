@@ -8,13 +8,13 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class RuneDto
     {
+        private string colloq;
+        private string description;
+        private ImageDto image;
+        private string name;
+        private string plaintext;
+        private RuneTypeDto rune;
+        private RuneStatsDto stats;
+        private string[] tags;
     }
 }
-colloq	string	
-description	string	
-image	ImageDto	
-name	string	
-plaintext	string	
-rune	RuneTypeDto	
-stats	RuneStatsDto	
-tags	List[string]
