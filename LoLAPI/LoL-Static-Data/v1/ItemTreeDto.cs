@@ -8,7 +8,7 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class ItemTreeDto
     {
+        private string header;
+        private string[] tags;
     }
 }
-header	string	
-tags	List[string]
