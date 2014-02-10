@@ -8,8 +8,8 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class ItemRuneDto
     {
+        private bool isRune;
+        private int tier;
+        private string type;
     }
 }
-isRune	boolean	
-tier	int	
-type	string
