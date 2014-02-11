@@ -1,1 +1,4 @@
-hard code the api calls into the dll
+create functions in the retrievers to get variables to setup db
+
+Done
+  hard code the api calls into the dll
