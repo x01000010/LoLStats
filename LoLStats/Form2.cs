@@ -111,5 +111,10 @@ namespace LoLStats
             RecentGamesDto rd = GameRetriever.GetGameData();
             button1.Show();
         }
+
+        private void splitContainer3_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

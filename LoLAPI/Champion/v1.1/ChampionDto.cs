@@ -19,6 +19,7 @@ namespace LoLAPI.Champion.v1._1
         private string name;  //Champion name.
         private bool rankedPlayEnabled;	 //Ranked play enabled flag.
 
+        #region Get/Set
         public bool Active
         {
             get { return active; }
@@ -84,8 +85,9 @@ namespace LoLAPI.Champion.v1._1
             get { return rankedPlayEnabled; }
             set { rankedPlayEnabled = value; }
         }
+        #endregion
 
         public ChampionDto() { }
-
+        
     }
 }

@@ -9,7 +9,7 @@ namespace LoLAPI.LoL_Static_Data.v1
     class SkinDto
     {
         private string id;
-private string name;
-private int num;
+        private string name;
+        private int num;
     }
 }

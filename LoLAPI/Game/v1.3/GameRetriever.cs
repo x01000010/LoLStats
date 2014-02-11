@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoLAPI
+namespace LoLAPI.Game.v1._3
 {
     public static class GameRetriever
     {
@@ -33,7 +33,6 @@ namespace LoLAPI
             RecentGamesDto RGD = new RecentGamesDto();
             var json = new WebClient().DownloadString(query);
             RGD = JsonConvert.DeserializeObject<RecentGamesDto>(json);
-            
             return RGD;
         }
     }

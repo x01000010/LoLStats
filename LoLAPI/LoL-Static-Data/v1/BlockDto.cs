@@ -8,7 +8,7 @@ namespace LoLAPI.LoL_Static_Data.v1
 {
     class BlockDto
     {
-        private BlockItemDto items[];
-private string type;
+        private BlockItemDto[] items;
+        private string type;
     }
 }
