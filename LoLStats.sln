@@ -5,18 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoLStats", "LoLStats\LoLSta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoLAPI", "LoLAPI\LoLAPI.csproj", "{817CDBAD-DDB3-4379-A513-DBE8FAD2D33D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLRipper", "HTMLRipper\HTMLRipper.csproj", "{A694CBBF-5D6E-4916-BFAC-AF47CBE2076D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15336F25-EEA2-4CD4-9EA6-AB8FBE2F7E2E}"
 	ProjectSection(SolutionItems) = preProject
 		ToDo.txt = ToDo.txt
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLAdmin", "SQLAdmin", "{0FEF16B4-56EC-4CCA-B0AD-BB0AEEE0C758}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Downloads\sqliteadmin\sqliteadmin\sqlite.dll = ..\..\..\..\Downloads\sqliteadmin\sqliteadmin\sqlite.dll
-		..\..\..\..\Downloads\sqliteadmin\sqliteadmin\sqlite3.dll = ..\..\..\..\Downloads\sqliteadmin\sqliteadmin\sqlite3.dll
-		..\..\..\..\Downloads\sqliteadmin\sqliteadmin\sqliteadmin.exe = ..\..\..\..\Downloads\sqliteadmin\sqliteadmin\sqliteadmin.exe
 	EndProjectSection
 EndProject
 Global
@@ -33,15 +24,8 @@ Global
 		{817CDBAD-DDB3-4379-A513-DBE8FAD2D33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{817CDBAD-DDB3-4379-A513-DBE8FAD2D33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{817CDBAD-DDB3-4379-A513-DBE8FAD2D33D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A694CBBF-5D6E-4916-BFAC-AF47CBE2076D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A694CBBF-5D6E-4916-BFAC-AF47CBE2076D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A694CBBF-5D6E-4916-BFAC-AF47CBE2076D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A694CBBF-5D6E-4916-BFAC-AF47CBE2076D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0FEF16B4-56EC-4CCA-B0AD-BB0AEEE0C758} = {15336F25-EEA2-4CD4-9EA6-AB8FBE2F7E2E}
 	EndGlobalSection
 EndGlobal
