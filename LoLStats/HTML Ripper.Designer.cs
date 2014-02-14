@@ -33,12 +33,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lb_StartAddress = new System.Windows.Forms.Label();
             this.lb_TeamXpath = new System.Windows.Forms.Label();
-            this.lb_NextPageXPath = new System.Windows.Forms.Label();
             this.lb_PlayerXPath = new System.Windows.Forms.Label();
             this.tb_StartAddress = new System.Windows.Forms.TextBox();
             this.tb_TeamXPath = new System.Windows.Forms.TextBox();
             this.tb_PlayerXPath = new System.Windows.Forms.TextBox();
-            this.tb_NextPageXPath = new System.Windows.Forms.TextBox();
             this.btn_Start = new System.Windows.Forms.Button();
             this.tv_Results = new System.Windows.Forms.TreeView();
             this.btn_Accept = new System.Windows.Forms.Button();
@@ -46,6 +44,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.btn_Clear = new System.Windows.Forms.Button();
+            this.lb_InGameNameXpath = new System.Windows.Forms.Label();
+            this.tb_IgnXpath = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -78,14 +78,14 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // lb_StartAddress
             // 
             this.lb_StartAddress.AutoSize = true;
-            this.lb_StartAddress.Location = new System.Drawing.Point(12, 8);
+            this.lb_StartAddress.Location = new System.Drawing.Point(12, 15);
             this.lb_StartAddress.Name = "lb_StartAddress";
             this.lb_StartAddress.Size = new System.Drawing.Size(54, 13);
             this.lb_StartAddress.TabIndex = 1;
@@ -94,25 +94,16 @@
             // lb_TeamXpath
             // 
             this.lb_TeamXpath.AutoSize = true;
-            this.lb_TeamXpath.Location = new System.Drawing.Point(12, 34);
+            this.lb_TeamXpath.Location = new System.Drawing.Point(12, 41);
             this.lb_TeamXpath.Name = "lb_TeamXpath";
             this.lb_TeamXpath.Size = new System.Drawing.Size(66, 13);
             this.lb_TeamXpath.TabIndex = 2;
             this.lb_TeamXpath.Text = "Team XPath";
             // 
-            // lb_NextPageXPath
-            // 
-            this.lb_NextPageXPath.AutoSize = true;
-            this.lb_NextPageXPath.Location = new System.Drawing.Point(12, 60);
-            this.lb_NextPageXPath.Name = "lb_NextPageXPath";
-            this.lb_NextPageXPath.Size = new System.Drawing.Size(89, 13);
-            this.lb_NextPageXPath.TabIndex = 3;
-            this.lb_NextPageXPath.Text = "Next Page XPath";
-            // 
             // lb_PlayerXPath
             // 
             this.lb_PlayerXPath.AutoSize = true;
-            this.lb_PlayerXPath.Location = new System.Drawing.Point(12, 86);
+            this.lb_PlayerXPath.Location = new System.Drawing.Point(12, 67);
             this.lb_PlayerXPath.Name = "lb_PlayerXPath";
             this.lb_PlayerXPath.Size = new System.Drawing.Size(68, 13);
             this.lb_PlayerXPath.TabIndex = 4;
@@ -134,17 +125,10 @@
             // 
             // tb_PlayerXPath
             // 
-            this.tb_PlayerXPath.Location = new System.Drawing.Point(107, 86);
+            this.tb_PlayerXPath.Location = new System.Drawing.Point(107, 60);
             this.tb_PlayerXPath.Name = "tb_PlayerXPath";
             this.tb_PlayerXPath.Size = new System.Drawing.Size(407, 20);
             this.tb_PlayerXPath.TabIndex = 7;
-            // 
-            // tb_NextPageXPath
-            // 
-            this.tb_NextPageXPath.Location = new System.Drawing.Point(107, 60);
-            this.tb_NextPageXPath.Name = "tb_NextPageXPath";
-            this.tb_NextPageXPath.Size = new System.Drawing.Size(407, 20);
-            this.tb_NextPageXPath.TabIndex = 8;
             // 
             // btn_Start
             // 
@@ -161,7 +145,7 @@
             this.tv_Results.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tv_Results.Location = new System.Drawing.Point(0, 0);
             this.tv_Results.Name = "tv_Results";
-            this.tv_Results.Size = new System.Drawing.Size(523, 297);
+            this.tv_Results.Size = new System.Drawing.Size(523, 287);
             this.tv_Results.TabIndex = 10;
             // 
             // btn_Accept
@@ -191,22 +175,22 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.tb_IgnXpath);
+            this.splitContainer1.Panel1.Controls.Add(this.lb_InGameNameXpath);
             this.splitContainer1.Panel1.Controls.Add(this.btn_Start);
             this.splitContainer1.Panel1.Controls.Add(this.lb_StartAddress);
             this.splitContainer1.Panel1.Controls.Add(this.lb_TeamXpath);
-            this.splitContainer1.Panel1.Controls.Add(this.lb_NextPageXPath);
             this.splitContainer1.Panel1.Controls.Add(this.lb_PlayerXPath);
             this.splitContainer1.Panel1.Controls.Add(this.tb_StartAddress);
             this.splitContainer1.Panel1.Controls.Add(this.tb_TeamXPath);
             this.splitContainer1.Panel1.Controls.Add(this.tb_PlayerXPath);
-            this.splitContainer1.Panel1.Controls.Add(this.tb_NextPageXPath);
             this.splitContainer1.Panel1.Controls.Add(this.btn_Exit);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(607, 419);
-            this.splitContainer1.SplitterDistance = 118;
+            this.splitContainer1.SplitterDistance = 128;
             this.splitContainer1.TabIndex = 13;
             // 
             // splitContainer2
@@ -223,7 +207,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.btn_Clear);
             this.splitContainer2.Panel2.Controls.Add(this.btn_Accept);
-            this.splitContainer2.Size = new System.Drawing.Size(607, 297);
+            this.splitContainer2.Size = new System.Drawing.Size(607, 287);
             this.splitContainer2.SplitterDistance = 523;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -235,6 +219,22 @@
             this.btn_Clear.TabIndex = 11;
             this.btn_Clear.Text = "Clear";
             this.btn_Clear.UseVisualStyleBackColor = true;
+            // 
+            // lb_InGameNameXpath
+            // 
+            this.lb_InGameNameXpath.AutoSize = true;
+            this.lb_InGameNameXpath.Location = new System.Drawing.Point(12, 93);
+            this.lb_InGameNameXpath.Name = "lb_InGameNameXpath";
+            this.lb_InGameNameXpath.Size = new System.Drawing.Size(58, 13);
+            this.lb_InGameNameXpath.TabIndex = 13;
+            this.lb_InGameNameXpath.Text = "IGN XPath";
+            // 
+            // tb_IgnXpath
+            // 
+            this.tb_IgnXpath.Location = new System.Drawing.Point(107, 86);
+            this.tb_IgnXpath.Name = "tb_IgnXpath";
+            this.tb_IgnXpath.Size = new System.Drawing.Size(407, 20);
+            this.tb_IgnXpath.TabIndex = 14;
             // 
             // HTML_Ripper
             // 
@@ -269,12 +269,10 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label lb_StartAddress;
         private System.Windows.Forms.Label lb_TeamXpath;
-        private System.Windows.Forms.Label lb_NextPageXPath;
         private System.Windows.Forms.Label lb_PlayerXPath;
         private System.Windows.Forms.TextBox tb_StartAddress;
         private System.Windows.Forms.TextBox tb_TeamXPath;
         private System.Windows.Forms.TextBox tb_PlayerXPath;
-        private System.Windows.Forms.TextBox tb_NextPageXPath;
         private System.Windows.Forms.Button btn_Start;
         private System.Windows.Forms.TreeView tv_Results;
         private System.Windows.Forms.Button btn_Accept;
@@ -282,5 +280,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button btn_Clear;
+        private System.Windows.Forms.TextBox tb_IgnXpath;
+        private System.Windows.Forms.Label lb_InGameNameXpath;
     }
 }

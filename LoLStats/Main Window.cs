@@ -29,8 +29,13 @@ namespace LoLStats
 
         private void hTMLRipperToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HTML_Ripper hr = new HTML_Ripper();
-            hr.Show();
+            int x = 0;
+            List<AHGL_Team> teamsToAdd = new List<AHGL_Team>();
+            using (HTML_Ripper hr = new HTML_Ripper(x))
+            {
+                hr.Show();
+                teamsToAdd = hr.Teams;
+            }
         }
     }
 }
