@@ -9,7 +9,7 @@ namespace LoLStats
 {
     class Logger
     {
-        private static readonly string _file_name = string.Format(@"{0}/log.txt", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+        private static readonly string _file_name = string.Format(@"{0}/LoLStats/log.txt", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
 
         static Logger()
         {
