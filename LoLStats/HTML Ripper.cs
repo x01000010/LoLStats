@@ -95,5 +95,10 @@ namespace LoLStats
             }
             return pagesToGoThrough;
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

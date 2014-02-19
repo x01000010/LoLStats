@@ -42,10 +42,11 @@
             this.btn_Accept = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tb_IgnXpath = new System.Windows.Forms.TextBox();
+            this.lb_InGameNameXpath = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.btn_Clear = new System.Windows.Forms.Button();
-            this.lb_InGameNameXpath = new System.Windows.Forms.Label();
-            this.tb_IgnXpath = new System.Windows.Forms.TextBox();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -55,10 +56,14 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -78,7 +83,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -145,12 +150,12 @@
             this.tv_Results.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tv_Results.Location = new System.Drawing.Point(0, 0);
             this.tv_Results.Name = "tv_Results";
-            this.tv_Results.Size = new System.Drawing.Size(523, 287);
+            this.tv_Results.Size = new System.Drawing.Size(511, 295);
             this.tv_Results.TabIndex = 10;
             // 
             // btn_Accept
             // 
-            this.btn_Accept.Location = new System.Drawing.Point(3, 3);
+            this.btn_Accept.Location = new System.Drawing.Point(5, 3);
             this.btn_Accept.Name = "btn_Accept";
             this.btn_Accept.Size = new System.Drawing.Size(75, 23);
             this.btn_Accept.TabIndex = 11;
@@ -165,11 +170,12 @@
             this.btn_Exit.TabIndex = 12;
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -190,8 +196,24 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(607, 419);
-            this.splitContainer1.SplitterDistance = 128;
+            this.splitContainer1.SplitterDistance = 120;
             this.splitContainer1.TabIndex = 13;
+            // 
+            // tb_IgnXpath
+            // 
+            this.tb_IgnXpath.Location = new System.Drawing.Point(107, 86);
+            this.tb_IgnXpath.Name = "tb_IgnXpath";
+            this.tb_IgnXpath.Size = new System.Drawing.Size(407, 20);
+            this.tb_IgnXpath.TabIndex = 14;
+            // 
+            // lb_InGameNameXpath
+            // 
+            this.lb_InGameNameXpath.AutoSize = true;
+            this.lb_InGameNameXpath.Location = new System.Drawing.Point(12, 93);
+            this.lb_InGameNameXpath.Name = "lb_InGameNameXpath";
+            this.lb_InGameNameXpath.Size = new System.Drawing.Size(58, 13);
+            this.lb_InGameNameXpath.TabIndex = 13;
+            this.lb_InGameNameXpath.Text = "IGN XPath";
             // 
             // splitContainer2
             // 
@@ -207,42 +229,43 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.btn_Clear);
             this.splitContainer2.Panel2.Controls.Add(this.btn_Accept);
-            this.splitContainer2.Size = new System.Drawing.Size(607, 287);
-            this.splitContainer2.SplitterDistance = 523;
+            this.splitContainer2.Size = new System.Drawing.Size(607, 295);
+            this.splitContainer2.SplitterDistance = 511;
             this.splitContainer2.TabIndex = 0;
             // 
             // btn_Clear
             // 
-            this.btn_Clear.Location = new System.Drawing.Point(2, 32);
+            this.btn_Clear.Location = new System.Drawing.Point(5, 32);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(75, 23);
             this.btn_Clear.TabIndex = 11;
             this.btn_Clear.Text = "Clear";
             this.btn_Clear.UseVisualStyleBackColor = true;
             // 
-            // lb_InGameNameXpath
+            // toolStripContainer1
             // 
-            this.lb_InGameNameXpath.AutoSize = true;
-            this.lb_InGameNameXpath.Location = new System.Drawing.Point(12, 93);
-            this.lb_InGameNameXpath.Name = "lb_InGameNameXpath";
-            this.lb_InGameNameXpath.Size = new System.Drawing.Size(58, 13);
-            this.lb_InGameNameXpath.TabIndex = 13;
-            this.lb_InGameNameXpath.Text = "IGN XPath";
             // 
-            // tb_IgnXpath
+            // toolStripContainer1.ContentPanel
             // 
-            this.tb_IgnXpath.Location = new System.Drawing.Point(107, 86);
-            this.tb_IgnXpath.Name = "tb_IgnXpath";
-            this.tb_IgnXpath.Size = new System.Drawing.Size(407, 20);
-            this.tb_IgnXpath.TabIndex = 14;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.splitContainer1);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(607, 419);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(607, 443);
+            this.toolStripContainer1.TabIndex = 14;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
             // 
             // HTML_Ripper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 443);
-            this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.toolStripContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "HTML_Ripper";
             this.Text = "HTML_Ripper";
@@ -257,8 +280,12 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -282,5 +309,6 @@
         private System.Windows.Forms.Button btn_Clear;
         private System.Windows.Forms.TextBox tb_IgnXpath;
         private System.Windows.Forms.Label lb_InGameNameXpath;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
     }
 }
