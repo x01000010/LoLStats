@@ -1,17 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace LoLStats
 {
     public partial class Main_Window : Form
     {
-        private string _debugDirectory = @"..\DB\";
-        private string _defaultDirectiory = string.Format(@"{0}\LoLStats", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+
+
+
+
+        private string _defaultDirectory = string.Format(@"{0}\LoLStats", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
 
         public Main_Window()
         {
             InitializeComponent();
+#if DEBUG
+
+            _defaultDirectory = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory().ToString(), @"..\..\..\DB"));
+                        
+#endif
+            if (!(Directory.Exists(_defaultDirectory)))
+            {
+                Directory.CreateDirectory(_defaultDirectory);
+            }
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -35,12 +48,23 @@ namespace LoLStats
             }
         }
 
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd_db = new SaveFileDialog();
+            sfd_db.Filter = "SQLiteDatabase|*.s3db";
+            sfd_db.FileName = "Data.s3db";
+            sfd_db.InitialDirectory = _defaultDirectory;
+        }
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd_db = new OpenFileDialog();
-            ofd_db.Filter = "Sqlite Files|*.d3b";
-            ofd_db.FileName = "Data.d3b";
-            ofd_db.InitialDirectory = string.Format(@"{0}", _defaultDirectiory);
+            ofd_db.Filter = "SQLite Database|*.s3db";
+            ofd_db.FileName = "Data.s3db";
+            ofd_db.InitialDirectory = _defaultDirectory;
+
+            
+            
 
             DialogResult result = ofd_db.ShowDialog();
             if (result == DialogResult.OK)

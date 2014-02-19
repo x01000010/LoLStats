@@ -1,16 +1,12 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoLAPI.Champion.v1._1
 {
     public static class ChampionRetriever
     {
         #region GetChampionList Calls
+
         //remove this one if ever released
         public static ChampionListDto GetChampionList()
         {
@@ -41,7 +37,8 @@ namespace LoLAPI.Champion.v1._1
         {
             return __GetChampionList(apiKey, region, freeToPlay.ToString());
         }
-        #endregion
+
+        #endregion GetChampionList Calls
 
         private static ChampionListDto __GetChampionList(string apiKey, string region, string freeToPlay)
         {

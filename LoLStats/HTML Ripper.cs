@@ -1,25 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LoLStats
 {
     public partial class HTML_Ripper : Form
     {
-        private List<AHGL_Team> teams;
         private int nextId;
-
-        public List<AHGL_Team> Teams
-        {
-            get { return teams; }
-        }
+        private List<AHGL_Team> teams;
 
         public HTML_Ripper(int nextId)
         {
@@ -30,41 +19,9 @@ namespace LoLStats
             tb_TeamXPath.Text = @"/html/body/div[@id='wrapper']/div[@id='main-content']/ul/li";
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        public List<AHGL_Team> Teams
         {
-            this.Close();
-        }
-
-        private void btn_Start_Click(object sender, EventArgs e)
-        {
-
-
-            //__getTeams();
-
-        }
-
-        private List<AHGL_Team> __getTeams()
-        {
-            string xpath = tb_TeamXPath.Text;
-            List<AHGL_Team> teams = new List<AHGL_Team>();
-            List<string> pagesToGoThrough = __getPagesWithTeams();
-            int id = nextId;
-            foreach (string page in pagesToGoThrough)
-            {
-                WebClient client = new WebClient();
-                string htmlCode = client.DownloadString(page);
-                HtmlAgilityPack.HtmlDocument document = new HtmlAgilityPack.HtmlDocument();
-                document.LoadHtml(htmlCode);
-                foreach (HtmlAgilityPack.HtmlNode node in document.DocumentNode.SelectNodes(xpath))
-                {
-                    string teamName = node.InnerText.Trim();
-                    HtmlAgilityPack.HtmlNode nn = node.FirstChild;
-                    string teamAddress = nn.Attributes["href"].Value.Trim();
-                    teams.Add(new AHGL_Team(teamName, id, teamAddress));
-                    id++;
-                }
-            }
-            return teams;
+            get { return teams; }
         }
 
         private List<String> __getPagesWithTeams()
@@ -96,7 +53,41 @@ namespace LoLStats
             return pagesToGoThrough;
         }
 
+        private List<AHGL_Team> __getTeams()
+        {
+            string xpath = tb_TeamXPath.Text;
+            List<AHGL_Team> teams = new List<AHGL_Team>();
+            List<string> pagesToGoThrough = __getPagesWithTeams();
+            int id = nextId;
+            foreach (string page in pagesToGoThrough)
+            {
+                WebClient client = new WebClient();
+                string htmlCode = client.DownloadString(page);
+                HtmlAgilityPack.HtmlDocument document = new HtmlAgilityPack.HtmlDocument();
+                document.LoadHtml(htmlCode);
+                foreach (HtmlAgilityPack.HtmlNode node in document.DocumentNode.SelectNodes(xpath))
+                {
+                    string teamName = node.InnerText.Trim();
+                    HtmlAgilityPack.HtmlNode nn = node.FirstChild;
+                    string teamAddress = nn.Attributes["href"].Value.Trim();
+                    teams.Add(new AHGL_Team(teamName, id, teamAddress));
+                    id++;
+                }
+            }
+            return teams;
+        }
+
         private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Start_Click(object sender, EventArgs e)
+        {
+            //__getTeams();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }

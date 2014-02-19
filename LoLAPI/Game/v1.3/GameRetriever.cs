@@ -1,10 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoLAPI.Game.v1._3
 {
@@ -24,7 +19,7 @@ namespace LoLAPI.Game.v1._3
 
         public static RecentGamesDto GetGameData(string apiKey, string region, long summonerId)
         {
-            ///api/lol/{region}/v1.3/game/by-summoner/{summonerId}/recent            
+            ///api/lol/{region}/v1.3/game/by-summoner/{summonerId}/recent
             string gameApi = string.Format(@"/api/lol/{0}/v1.3/game/by-summoner/{1}/recent", region, summonerId);
             string query = string.Empty;
 

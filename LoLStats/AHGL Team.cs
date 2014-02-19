@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LoLStats
 {
     public class AHGL_Team
     {
-        private string name;
         private int id;
+        private string name;
         private List<AHGL_Player> players;
         private string webpage;
 
         #region Public Variables
 
-        public string Name
-        {
-            get { return name; }
-        }
-
         public int Id
         {
             get { return id; }
+        }
+
+        public string Name
+        {
+            get { return name; }
         }
 
         public List<AHGL_Player> Players
@@ -30,13 +26,13 @@ namespace LoLStats
             get { return players; }
         }
 
-        #endregion
-
         public string Webpage
         {
             get { return webpage; }
             set { webpage = value; }
         }
+
+        #endregion Public Variables
 
         #region Contstructors
 
@@ -48,9 +44,12 @@ namespace LoLStats
             players = new List<AHGL_Player>();
         }
 
-        public AHGL_Team(string name, int id) : this(name, id, string.Empty) { }
+        public AHGL_Team(string name, int id)
+            : this(name, id, string.Empty)
+        {
+        }
 
-        #endregion
+        #endregion Contstructors
 
         public void addPlayer(AHGL_Player newPlayer)
         {

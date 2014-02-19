@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LoLAPI.Champion.v1._1
+﻿namespace LoLAPI.Champion.v1._1
 {
     public class ChampionDto
     {
@@ -20,6 +15,7 @@ namespace LoLAPI.Champion.v1._1
         private bool rankedPlayEnabled;	 //Ranked play enabled flag.
 
         #region Get/Set
+
         public bool Active
         {
             get { return active; }
@@ -85,9 +81,11 @@ namespace LoLAPI.Champion.v1._1
             get { return rankedPlayEnabled; }
             set { rankedPlayEnabled = value; }
         }
-        #endregion
 
-        public ChampionDto() { }
-        
+        #endregion Get/Set
+
+        public ChampionDto()
+        {
+        }
     }
 }
